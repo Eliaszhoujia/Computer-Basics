@@ -1,0 +1,7 @@
+M = input("Monthly payment")
+P = input("Principal loan amount")
+r = input("Monthly interest rate")
+n = input("Total number of moths")
+def Montlhy_loan
+
+M = P[r(1+r)^n] / [(1+r)^n - 1]

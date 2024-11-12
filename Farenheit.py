@@ -1,13 +1,18 @@
-U = str (input("Do you want to convert celsius or farenheit?"))
-T = float (input ("Temperature"))
-resultado = 0
-def conversor():
-    if U == "celsius":
-        resultado = T  *9/5+32
-        print("The temperature is" + float(resultado)+"Fº")
-    else: 
-        resultado = T*5/9-32
-        print("The temperature is" + float(resultado)+"Cº")
-conversor()
+U = input("Do you want to convert celsius or fahrenheit?")
 
+def celsius_to_fahrenheit(T):
+    return T * 1.8 + 32
+def fahrenheit_to_celsius(T):
+    return (T - 32) / 1.8 
 
+if U == "celsius": 
+    T = float (input ("Temperature")) 
+    resultado =  celsius_to_fahrenheit(T)
+    print("The temperature is " + str (resultado) + " Fº")  
+elif U == "fahrenheit":
+  T = float (input ("Temperature"))
+  resultado =  fahrenheit_to_celsius(T)
+  print("The temperature is " + str (resultado) + " Cº")
+else:
+    resultado = 0
+    print("Not the right input")
